@@ -1,0 +1,11 @@
+{
+  "db": {
+    "port": 27017,
+    "url": "mongodb+srv://newUser:12345@cluster0.nzldw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "database": "cluster0",
+    "password": "12345",
+    "name": "db",
+    "user": "newUser",
+    "connector": "mongodb"
+  }
+}

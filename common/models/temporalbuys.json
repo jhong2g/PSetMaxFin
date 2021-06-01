@@ -1,0 +1,23 @@
+{
+  "name": "temporalbuys",
+  "plural": "tempbuys",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "iduser": {
+      "type": "string",
+      "required": true
+    },
+    "idproduct": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

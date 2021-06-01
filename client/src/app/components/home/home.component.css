@@ -1,0 +1,38 @@
+#products {
+    border-radius: 0.25rem;
+    background: #f9f9f9 !important;
+  }
+  section {
+    padding: 20px 0;
+  }
+  #products .card {
+    border: none;
+    background: #fff;
+  }
+  .card_product {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+  }
+  
+  .card_product .card {
+    min-height: 100px;
+  }
+  
+  p.card-text,
+  h4.card-title {
+    min-height: 60px !important;
+  }
+  
+  .card-title {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .card_product .card .card-body img {
+    width: 120px;
+    height: 120px;
+  }
+
+
+ 

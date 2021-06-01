@@ -1,0 +1,35 @@
+<section id="profile" class="container">
+    <div class="row mt-5">
+        <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center card">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
+            </div>
+            <div class="row user-details">
+                <div class="col-12">
+                    <img src="../../../../assets/logged in.png" class="rounded-cricle img-thumbnail"
+                     alt="profile">
+                    <h5>
+                        {{user.name}}
+                    </h5>
+                    <p class="text-info bg-muted">
+                        {{user.email}}</p>
+
+                    <p class="text-info bg-muted">
+                        {{user.tipo}}
+                    </p>
+                    <p>  </p>
+                    <p class="text-danger" *ngIf="user.tienda != null">
+                        Tienda:
+                    </p>
+                    <p class="text-danger " *ngIf="user.tienda != null">
+                        {{user.tienda}}</p>
+                    <p>
+                    <hr>
+                    <span>
+                        WELCOME TO PSETMAX ECOMMERCE
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

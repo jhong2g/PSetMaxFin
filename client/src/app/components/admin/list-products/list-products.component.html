@@ -1,0 +1,39 @@
+
+<div class="row mt-5">
+    <div class="col">
+        <button type="button" class="btn btn-success float-right mb-1" data-toggle="modal" 
+        data-target="#modalProduct">+</button>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">DESCRIPCION</th>
+                    <th scope="col">PRECIO</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products; index as i">
+                    <td scope="row">{{i+1}}</td>
+                    <td>{{product.nombre}}</td>
+                    <td>{{product.descripcion}}</td>
+                    <td>${{product.precio}}</td>
+                    
+                    <td>
+                        <button class="btn btn-primary"(click)="onPreUpdateProduct(product)"
+                        data-toggle="modal" data-target="#modalProduct">Modificar</button>
+                    </td>
+                    <td>
+                        <a href="/admin/list-products" class="btn btn-danger" 
+                        (click)="onDeleteProduct(product.id)">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<app-modal></app-modal>
+
+

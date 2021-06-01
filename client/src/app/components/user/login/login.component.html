@@ -1,0 +1,39 @@
+<section id="login" class = "mb-5 mt-5">
+    <div class="container">
+        <div class= "row">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+                <div class="card_login">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <form #formLogin= "ngForm"(ngSubmit)="onLogin(formLogin)">
+                                <h1 class="h3 mb-3 font-weight-normal"*ngIf="!isError">Login</h1>
+                                <div class="alert alert-danger" role="alert" *ngIf="isError">
+                                    ALGO ESTA MAL!
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control" #email="ngModel"
+                                    placeholder="Email"  [(ngModel)]="user.email"required pattern="[a-zA-Z]+[@]+[a-z]+[.]+[a-z]+$">
+                                </div>
+                                <div class="alert alert-danger" role="alert" *ngIf="email.touched && !email.valid">
+                                    <div *ngIf="email.errors.pattern"> debe cumplir estructura de email(ejemplo@algo.algo)</div>
+                                  </div>
+                                <div class="form-group">
+                                    <input type="password" id="password" name="password" class="form-control" 
+                                    placeholder="Contraseña" [(ngModel)]="user.password" required>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-success
+                                 btn-block"> LOGIN </button>
+                                 <div class="form-group">
+                                     <a routerLink="/user/register" class="form-control login-user"> ¿no tienes cuenta?
+
+                                     </a>
+                                 </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

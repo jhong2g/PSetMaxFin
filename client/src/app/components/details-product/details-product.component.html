@@ -1,0 +1,25 @@
+<section id="products">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+                <div class="card_product">
+                    <div class="class card">
+                        <div class="class card-body text-center">
+                            <p>
+                                <img class="img-fluid" src="{{product.imagen}}" >
+                            </p>
+                            <h4  routerLink="/product/{{product.id}}"    class="class card-title">{{product.nombre}}</h4>
+                            <p class="card text">
+                               {{product.descripcion}}
+                            </p>
+                            <p class="card text">
+                                {{product.precio}}
+                             </p>
+                            <a class="btn btn-block btn-success" target="_blank">BUY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

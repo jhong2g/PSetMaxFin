@@ -1,0 +1,20 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Carrito
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      
+      <ul class="list-group">
+        <li *ngFor="let product of buys" class="list-group-item ">
+          
+          <ng-container *ngFor="let producto of products">
+            <td *ngIf="product.idproduct === producto.id; else menor">{{producto.nombre}}</td>  
+          </ng-container>
+          
+        </li>
+        
+      </ul>
+      
+      
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<div class="row mt-5">
+    <div class="col">
+       
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">DIRECCIÓN</th>
+                    <th scope="col">TOTAL</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let venta of ventas; index as i">
+                    <td scope="row">{{i+1}}</td>
+                    <td>{{venta.nombre}}</td>
+                    <td>{{venta.direccion}}</td>
+                    <td>${{venta.total}}</td>
+                    
+                    
+                    <td>
+                        <a href="/admin/list-ventas" class="btn btn-danger" 
+                        (click)="onDeleteVenta(venta.id)">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
